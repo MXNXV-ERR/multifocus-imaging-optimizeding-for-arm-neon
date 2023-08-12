@@ -1,0 +1,133 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/include",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include-fixed",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+					],
+					"linkDirectories" : 
+					[
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex",
+						"pthread",
+						"advapi32",
+						"shell32",
+						"user32",
+						"kernel32",
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex"
+					]
+				},
+				"path" : "arm-linux-gnueabi-gcc",
+				"version" : "4.8.1"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++/x86_64-w64-mingw32",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++/backward",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/include",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include-fixed",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+					],
+					"linkDirectories" : 
+					[
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib",
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/libstdc++.a",
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex",
+						"pthread",
+						"advapi32",
+						"shell32",
+						"user32",
+						"kernel32",
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex"
+					]
+				},
+				"path" : "arm-linux-gnueabi-g++",
+				"version" : "4.8.1"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"implicit" : {},
+				"path" : "C:/Users/MXNXV-ERR/Desktop/MXNXV/Applications/Dev-Cpp/MinGW64/bin/windres.exe"
+			},
+			"language" : "RC",
+			"sourceFileExtensions" : 
+			[
+				"rc",
+				"RC"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
