@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\src\splining.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\src\custom_multifocus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\src\alignment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\src\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\src\splining.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\src\custom_multifocus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\src\alignment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{AC973579-1B59-3987-94DC-ED904550A9B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{662E8B4E-87B7-3464-8B04-7340593D078A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

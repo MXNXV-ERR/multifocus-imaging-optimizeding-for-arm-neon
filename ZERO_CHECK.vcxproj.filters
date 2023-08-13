@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging\multifocus-imaging-master\bin\CMakeFiles\63687fb57d86dcb19c22e0cd95738194\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0BEF269E-E3D6-3D02-961B-F5972718EE07}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
