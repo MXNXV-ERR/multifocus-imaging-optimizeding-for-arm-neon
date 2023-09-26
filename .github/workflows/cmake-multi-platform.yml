@@ -54,8 +54,18 @@ jobs:
       run: |
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
-    - uses: Dovyski/setup-opencv-action@v1.1
+    - name: Cache OpenCV
+      id: opencv-cache
+      uses: actions/cache@v2
       with:
+        path: ./opencv-install
+        key: ${{ runner.os }}-opencv-cache
+
+    - name: Install OpenCV
+      uses: rayandrews/with-opencv-action@v1
+      with:  
+        dir: ./opencv-install
+        cached: ${{ steps.opencv-cache.outputs.cache-hit }}
         opencv-version: '4.0.0'
 
     - name: Configure CMake
