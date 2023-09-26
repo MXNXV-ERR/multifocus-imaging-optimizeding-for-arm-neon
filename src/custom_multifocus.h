@@ -1,7 +1,3 @@
-//
-// Created by antoinewdg on 04/10/16.
-//
-
 #ifndef MULTI_FOCUS_CUSTOM_MULTIFOCUS_H
 #define MULTI_FOCUS_CUSTOM_MULTIFOCUS_H
 

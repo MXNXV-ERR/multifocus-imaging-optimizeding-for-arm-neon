@@ -1,11 +1,5 @@
-//
-// Created by antoinewdg on 23/09/16.
-//
-
 #include "alignment.h"
 
-
-using cv::xfeatures2d::SURF;
 
 void align_a_on_b(Mat_<Vec3b> &im_a, const Mat_<Vec3b> &im_b) {
 

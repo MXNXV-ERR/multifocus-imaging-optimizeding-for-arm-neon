@@ -1,10 +1,6 @@
-//
-// Created by antoinewdg on 04/10/16.
-//
-
 #include "custom_multifocus.h"
 
-Mat_<float> dilate(Mat_<float> a, int t) {
+Mat_<float> dilate(Mat_<float> &a, int t) {
     auto elt = cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(2 * t + 1, 2 * t + 1));
     Mat_<float> r;
     cv::dilate(a, r, elt, cv::Point(-1, -1), 1, cv::BORDER_REFLECT101);
@@ -12,10 +8,10 @@ Mat_<float> dilate(Mat_<float> a, int t) {
     return r;
 }
 
-Mat_<uchar> build_depth_map(vector<Mat_<Vec3b>> images, int t) {
+Mat_<uchar> build_depth_map(vector<Mat_<Vec3b>> &images, int t) {
     vector<Mat_<float>> focus_measures;
     for (auto im : images) {
-        auto pyramid = compute_laplacian_pyramid(to_grayscale(im), generating_kernel(0.3f));
+        auto pyramid = compute_laplacian_pyramid(to_grayscale(im), kernel.clone());
         focus_measures.push_back(dilate(pyramid[0], t));
     }
 
@@ -32,19 +28,17 @@ Mat_<uchar> build_depth_map(vector<Mat_<Vec3b>> images, int t) {
         }
     }
 
-    cv::fastNlMeansDenoising(depth_map, depth_map);
+    //cv::fastNlMeansDenoising(depth_map, depth_map);
     return depth_map;
 }
 
-vector<Mat_<float>> build_masks(unsigned long n, Mat_<uchar> depth_map) {
+vector<Mat_<float>> build_masks(unsigned long n, Mat_<uchar>& depth_map) {
     vector<Mat_<float>> masks;
     for (int i = 0; i < n; i++) {
         Mat_<uchar> d = depth_map == i;
         masks.emplace_back();
         d.convertTo(masks.back(), CV_32F, 1.f / 255);
     }
-
-
     return masks;
 }
 

@@ -1,21 +1,8 @@
-//
-// Created by antoinewdg on 24/09/16.
-//
-
 #ifndef MULTI_FOCUS_SPLINING_H
 #define MULTI_FOCUS_SPLINING_H
 
 #include "utils.h"
 
-/**
- * Build the generating kernal of parameter a
- *
- * Defined in the paper on splining.
- *
- * @param a
- * @return
- */
-Mat_<float> generating_kernel(float a);
 
 //Mat_<float> expand_n_times(Mat_<float> &src, const Mat_<float> &w, int n);
 /**
@@ -25,7 +12,7 @@ Mat_<float> generating_kernel(float a);
  * @param w kernel to be used
  * @return
  */
-vector<Mat_<float>> compute_gaussian_pyramid(Mat_<float> src, Mat_<float> w);
+vector<Mat_<float>> compute_gaussian_pyramid(Mat_<float> &src, Mat_<float> &w);
 
 /**
  * Compute the Laplacian pyramid of an image

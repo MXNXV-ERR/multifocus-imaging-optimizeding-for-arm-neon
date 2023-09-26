@@ -1,3 +1,0 @@
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\multi_focus.dir/objects.a
-C:\Users\MXNXV-ERR\Desktop\MXNXV\Applications\Dev-Cpp\MinGW64\bin\ar.exe qc CMakeFiles\multi_focus.dir/objects.a @CMakeFiles\multi_focus.dir\objects1.rsp
-arm-linux-gnueabi-g++  --std=c++11 -g -Wl,--whole-archive CMakeFiles\multi_focus.dir/objects.a -Wl,--no-whole-archive -o C:\Users\MXNXV-ERR\Desktop\MXNXV\Samsung\multifocus-imaging-master\bin\multi_focus.exe -Wl,--out-implib,libmulti_focus.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\multi_focus.dir\linkLibs.rsp

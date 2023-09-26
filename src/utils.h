@@ -1,13 +1,5 @@
-//
-// Created by antoinewdg on 25/09/16.
-//
-
 #ifndef MULTI_FOCUS_UTILS_H
 #define MULTI_FOCUS_UTILS_H
-//
-// Created by antoinewdg on 21/09/16.
-//
-
 
 
 #include <iostream>
@@ -27,6 +19,14 @@ using std::cerr;
 using cv::Vec3b;
 using cv::Point2f;
 
+const cv::Mat_<float> kernel = (cv::Mat_<float>(5, 5) <<
+    0.01f,  0.025f, 0.03f, 0.025f, 0.01f,
+    0.025f, 0.0625f,0.075f,0.0625f,0.025f,
+    0.03f,  0.075f, 0.09f, 0.075f, 0.03f,
+    0.025f, 0.0625f,0.075f,0.0625f,0.025f,
+    0.01f,  0.025f, 0.03f, 0.025f, 0.01f
+    );
+
 
 template<typename TimeT = std::chrono::milliseconds>
 struct measure {
@@ -41,18 +41,18 @@ struct measure {
 };
 
 
-inline void scale(cv::Mat m, double alpha = 0, double beta = 1) {
+inline void scale(cv::Mat &m, double alpha = 0, double beta = 1) {
     cv::normalize(m, m, alpha, beta, cv::NORM_MINMAX);
 }
 
-inline Mat_<float> laplacian(Mat_<float> src, int ksize = 3) {
-    Mat_<float> gradx, grady, laplacian;
-    cv::Sobel(src, gradx, CV_32F, 2, 0, ksize);
-    cv::Sobel(src, grady, CV_32F, 0, 2, ksize);
-
-    laplacian = cv::abs(gradx) + cv::abs(grady);
-    return laplacian;
-}
+//inline Mat_<float> laplacian(Mat_<float> &src, int ksize = 3) {
+//    Mat_<float> gradx, grady, laplacian;
+//    cv::Sobel(src, gradx, CV_32F, 2, 0, ksize);
+//    cv::Sobel(src, grady, CV_32F, 0, 2, ksize);
+//
+//    laplacian = cv::abs(gradx) + cv::abs(grady);
+//    return laplacian;
+//}
 
 
 inline Mat_<float> load_grayscale(const string &filename) {
@@ -75,7 +75,7 @@ inline Mat_<float> to_grayscale(Mat_<Vec3b> &src) {
     return out;
 }
 
-inline void display_and_block(cv::Mat im) {
+inline void display_and_block(cv::Mat &im) {
     cv::imshow("window", im);
     cv::waitKey();
 }
@@ -115,15 +115,22 @@ inline Mat_<Vec3b> merge_channels(vector<Mat_<float>> &vec) {
     return result;
 }
 
-inline Mat_<float> convolution_with_reflection(Mat_<float> a, Mat_<float> k) {
+inline Mat_<float> convolution_with_reflection(Mat_<float> &a, Mat_<float> k) {
     Mat_<float> result;
     cv::filter2D(a, result, CV_32F, k, cv::Point(-1, -1), 0, cv::BORDER_REFLECT101);
+
+    //const cv::Mat_<float> kernelX = (cv::Mat_<float>(1, 5) << 0.01f, 0.025f, 0.03f, 0.025f, 0.01f);
+    //const cv::Mat_<float> kernelY = kernelX.t();
+    //cv::sepFilter2D(a, result, CV_32F, kernelX, kernelY, cv::Point(-1, -1), 0, cv::BORDER_REFLECT101);
     return result;
 }
 
-inline Mat_<Vec3b> convolution_with_reflection(Mat_<Vec3b> a, Mat_<float> k) {
+inline Mat_<Vec3b> convolution_with_reflection(Mat_<Vec3b> &a, Mat_<float> k) {
     Mat_<Vec3b> result;
     cv::filter2D(a, result, CV_8UC3, k, cv::Point(-1, -1), 0, cv::BORDER_REFLECT101);
+    //const cv::Mat_<float> kernelX = (cv::Mat_<float>(1, 5) << 0.01f, 0.025f, 0.03f, 0.025f, 0.01f);
+    //const cv::Mat_<float> kernelY = kernelX.t();
+    //cv::sepFilter2D(a, result, CV_8UC3, kernelX, kernelY, cv::Point(-1, -1), 0, cv::BORDER_REFLECT101);
     return result;
 }
 
